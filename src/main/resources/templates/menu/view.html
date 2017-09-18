@@ -10,10 +10,10 @@
 
 </nav>
 
-<p th:unless="${categories} and ${categories.size()}">no categories :(</p>
-<ul th:each="category : ${categories}">
-    <li th:text="${category.name}"></li>
+<p th:unless="${menu} and ${menu.cheeses.size()}"> No cheeses :(</p>
+<ul th:each="cheese : ${menu.cheeses}">
+    <li th:text="${cheese.name}"></li>
 </ul>
-<a href="/category/add">Add Category</a>
+<p><a th:href="'/menu/add-item/' + ${menu.id}">Add Cheese</a></p>
 </body>
 </html>
